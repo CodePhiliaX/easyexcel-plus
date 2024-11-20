@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import ai.chat2db.excel.metadata.data.ReadCellData;
 
 /**
- * Read not to {@code com.alibaba.excel.metadata.BasicParameter#clazz} value, the default will return type.
+ * Read not to {@code ai.chat2db.excel.metadata.BasicParameter#clazz} value, the default will return type.
  *
  * @author Jiaju Zhuang
  */

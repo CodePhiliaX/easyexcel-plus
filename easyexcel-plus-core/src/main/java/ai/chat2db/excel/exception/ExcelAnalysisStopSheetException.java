@@ -5,7 +5,7 @@ package ai.chat2db.excel.exception;
  * This exception will only stop the parsing of the current sheet. If you want to stop the entire excel parsing, please
  * use ExcelAnalysisStopException.
  *
- * The com.alibaba.excel.read.listener.ReadListener#doAfterAllAnalysed(com.alibaba.excel.context.AnalysisContext) method
+ * The ai.chat2db.excel.read.listener.ReadListener#doAfterAllAnalysed(ai.chat2db.excel.context.AnalysisContext) method
  * is called after the call is stopped.
  *
  * @author Jiaju Zhuang

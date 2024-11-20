@@ -19,7 +19,7 @@ import org.openxmlformats.schemas.spreadsheetml.x2006.main.CTWorksheet;
 /**
  * Handle the problem of unable to write dimension.
  *
- * https://github.com/alibaba/easyexcel/issues/1282
+ * https://github.com/CodePhiliaX/easyexcel-plus/issues/1282
  *
  * @author Jiaju Zhuang
  */

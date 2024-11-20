@@ -29,14 +29,14 @@
     </properties>
 
     <scm>
-        <url>https://github.com/alibaba/easyexcel</url>
-        <connection>scm:git:https://git@github.com/alibaba/easyexcel.git</connection>
+        <url>https://github.com/CodePhiliaX/easyexcel-plus</url>
+        <connection>scm:git:https://git@github.com/CodePhiliaX/easyexcel-plus.git</connection>
     </scm>
 
 
     <organization>
-        <name>Alibaba Group</name>
-        <url>https://github.com/alibaba</url>
+        <name>Chat2DB</name>
+        <url>https://github.com/CodePhiliaX</url>
     </organization>
 
     <developers>
@@ -75,20 +75,6 @@
 
     <dependencyManagement>
         <dependencies>
-<!--            <dependency>-->
-<!--                <groupId>com.alibaba</groupId>-->
-<!--                <artifactId>easyexcel</artifactId>-->
-<!--                <version>${revision}</version>-->
-<!--            </dependency>-->
-
-<!--            <dependency>-->
-<!--                <groupId>com.alibaba</groupId>-->
-<!--                <artifactId>easyexcel-core</artifactId>-->
-<!--                <version>${revision}</version>-->
-<!--            </dependency>-->
-
-
-
         </dependencies>
     </dependencyManagement>
 
@@ -109,18 +95,6 @@
     <build>
         <pluginManagement>
             <plugins>
-<!--                <plugin>-->
-<!--                    <groupId>org.apache.maven.plugins</groupId>-->
-<!--                    <artifactId>maven-pmd-plugin</artifactId>-->
-<!--                    <version>3.8</version>-->
-<!--                    <dependencies>-->
-<!--&lt;!&ndash;                        <dependency>&ndash;&gt;-->
-<!--&lt;!&ndash;                            <groupId>com.alibaba.p3c</groupId>&ndash;&gt;-->
-<!--&lt;!&ndash;                            <artifactId>p3c-pmd</artifactId>&ndash;&gt;-->
-<!--&lt;!&ndash;                            <version>1.3.6</version>&ndash;&gt;-->
-<!--&lt;!&ndash;                        </dependency>&ndash;&gt;-->
-<!--                    </dependencies>-->
-<!--                </plugin>-->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
