@@ -14,6 +14,7 @@
     <packaging>jar</packaging>
     <artifactId>easyexcel-plus-core</artifactId>
     <name>easyexcel-plus-core</name>
+    <version>1.0.1</version>
 
     <dependencies>
         <dependency>
@@ -58,7 +59,7 @@
         <dependency>
             <groupId>ai.chat2db.excel</groupId>
             <artifactId>easyexcel-plus-support</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <version>1.0.1</version>
         </dependency>
     </dependencies>
 </project>

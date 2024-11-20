@@ -15,7 +15,7 @@
     <packaging>jar</packaging>
     <artifactId>easyexcel-plus-support</artifactId>
     <name>easyexcel-plus-support</name>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
 
     <properties>
         <revision>1.0.1-SNAPSHOT</revision>
