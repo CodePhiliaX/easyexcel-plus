@@ -11,7 +11,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <url>https://github.com/alibaba/easyexcel</url>
+    <url>https://github.com/CodePhiliaX/easyexcel-plus</url>
     <packaging>jar</packaging>
     <artifactId>easyexcel-plus-test</artifactId>
     <name>easyexcel-plus-test</name>
@@ -73,7 +73,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <includes>
-                        <include>/com/alibaba/easyexcel/test/core/**/*.java</include>
+                        <include>/ai/chat2db/easyexcel/test/core/**/*.java</include>
                     </includes>
                     <testFailureIgnore>false</testFailureIgnore>
                 </configuration>
