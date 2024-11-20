@@ -5,7 +5,7 @@
     <groupId>ai.chat2db.excel</groupId>
     <artifactId>easyexcel-plus-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.1</version>
+    <version>${revision}</version>
     <name>easyexcel-plus-parent</name>
     <description>easyexcel plus is a excel handle tools written in Java</description>
     <url>https://github.com/CodePhiliaX/easyexcel-plus</url>
@@ -20,7 +20,7 @@
 
 
     <properties>
-        <revision>1.0.0-SNAPSHOT</revision>
+        <revision>0.0.1</revision>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.8</jdk.version>
         <gpg.skip>true</gpg.skip>

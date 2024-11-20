@@ -7,7 +7,7 @@
     <parent>
         <groupId>ai.chat2db.excel</groupId>
         <artifactId>easyexcel-plus-parent</artifactId>
-        <version>1.0.1</version>
+        <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -15,10 +15,9 @@
     <packaging>jar</packaging>
     <artifactId>easyexcel-plus-support</artifactId>
     <name>easyexcel-plus-support</name>
-    <version>1.0.1</version>
+    <version>${revision}</version>
 
     <properties>
-        <revision>1.0.1-SNAPSHOT</revision>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.8</jdk.version>
         <gpg.skip>true</gpg.skip>

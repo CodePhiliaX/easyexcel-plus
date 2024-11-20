@@ -6,7 +6,7 @@
     <parent>
         <groupId>ai.chat2db.excel</groupId>
         <artifactId>easyexcel-plus-parent</artifactId>
-        <version>1.0.1</version>
+        <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -14,7 +14,7 @@
     <packaging>jar</packaging>
     <artifactId>easyexcel-plus-core</artifactId>
     <name>easyexcel-plus-core</name>
-    <version>1.0.1</version>
+    <version>${revision}</version>
 
     <dependencies>
         <dependency>
@@ -59,7 +59,7 @@
         <dependency>
             <groupId>ai.chat2db.excel</groupId>
             <artifactId>easyexcel-plus-support</artifactId>
-            <version>1.0.1</version>
+            <version>${revision}</version>
         </dependency>
     </dependencies>
 </project>
