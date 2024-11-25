@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>ai.chat2db.excel</groupId>
+        <groupId>cn.idev.excel</groupId>
         <artifactId>easyexcel-plus-parent</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
@@ -24,7 +24,7 @@
     <dependencies>
 
         <dependency>
-            <groupId>ai.chat2db.excel</groupId>
+            <groupId>cn.idev.excel</groupId>
             <artifactId>easyexcel-plus-core</artifactId>
             <version>${revision}</version>
         </dependency>

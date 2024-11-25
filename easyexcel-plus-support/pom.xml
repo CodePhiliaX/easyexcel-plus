@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>ai.chat2db.excel</groupId>
+        <groupId>cn.idev.excel</groupId>
         <artifactId>easyexcel-plus-parent</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
@@ -74,7 +74,7 @@
                             <relocations>
                                 <relocation>
                                     <pattern>org.springframework</pattern>
-                                    <shadedPattern>ai.chat2db.excel.support</shadedPattern>
+                                    <shadedPattern>cn.idev.excel.support</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>
