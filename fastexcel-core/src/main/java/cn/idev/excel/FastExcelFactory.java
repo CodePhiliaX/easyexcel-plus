@@ -16,7 +16,7 @@ import cn.idev.excel.write.builder.ExcelWriterTableBuilder;
  *
  * @author jipengfei
  */
-public class EasyExcelFactory {
+public class FastExcelFactory {
 
     /**
      * Build excel the write

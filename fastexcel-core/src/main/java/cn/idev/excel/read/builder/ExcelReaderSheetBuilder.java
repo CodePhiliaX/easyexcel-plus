@@ -60,7 +60,7 @@ public class ExcelReaderSheetBuilder extends AbstractExcelReaderParameterBuilder
      */
     public void doRead() {
         if (excelReader == null) {
-            throw new ExcelGenerateException("Must use 'EasyExcelFactory.read().sheet()' to call this method");
+            throw new ExcelGenerateException("Must use 'FastExcelFactory.read().sheet()' to call this method");
         }
         excelReader.read(build());
         excelReader.finish();
@@ -73,7 +73,7 @@ public class ExcelReaderSheetBuilder extends AbstractExcelReaderParameterBuilder
      */
     public <T> List<T> doReadSync() {
         if (excelReader == null) {
-            throw new ExcelAnalysisException("Must use 'EasyExcelFactory.read().sheet()' to call this method");
+            throw new ExcelAnalysisException("Must use 'FastExcelFactory.read().sheet()' to call this method");
         }
         SyncReadListener syncReadListener = new SyncReadListener();
         registerReadListener(syncReadListener);

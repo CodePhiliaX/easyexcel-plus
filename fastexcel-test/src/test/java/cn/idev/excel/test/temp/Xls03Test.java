@@ -4,8 +4,8 @@ import java.util.List;
 
 import cn.idev.excel.EasyExcel;
 import cn.idev.excel.util.BeanMapUtils;
-import ai.chat2db.excel.support.cglib.beans.BeanMap;
-import ai.chat2db.excel.support.cglib.core.DebuggingClassWriter;
+import cn.idev.excel.support.cglib.beans.BeanMap;
+import cn.idev.excel.support.cglib.core.DebuggingClassWriter;
 import com.alibaba.fastjson2.JSON;
 
 import org.junit.jupiter.api.Test;

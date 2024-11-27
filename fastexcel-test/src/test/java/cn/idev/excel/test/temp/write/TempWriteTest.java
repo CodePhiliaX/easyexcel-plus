@@ -11,7 +11,7 @@ import cn.idev.excel.util.BeanMapUtils;
 import cn.idev.excel.util.FileUtils;
 import cn.idev.excel.util.ListUtils;
 import cn.idev.excel.test.util.TestFileUtil;
-import ai.chat2db.excel.support.cglib.beans.BeanMap;
+import cn.idev.excel.support.cglib.beans.BeanMap;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.ClientAnchor;
