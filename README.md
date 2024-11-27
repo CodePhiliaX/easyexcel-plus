@@ -1,4 +1,4 @@
-# easyexcel-plus
+# easyexcel-plus 改名为FastExcel
 easyexcel作者最新升级版本将在11月底正式发布。
 新版本坚持：
 
