@@ -211,6 +211,12 @@ public class ExcelReaderBuilder extends AbstractExcelReaderParameterBuilder<Exce
         return this;
     }
 
+
+    public ExcelReaderBuilder numRows(Integer numRows) {
+        readWorkbook.setNumRows(numRows);
+        return this;
+    }
+
     public ExcelReader build() {
         return new ExcelReader(readWorkbook);
     }

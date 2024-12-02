@@ -17,7 +17,7 @@ public class PageReadListener<T> implements ReadListener<T> {
     /**
      * Default single handle the amount of data
      */
-    public static int BATCH_COUNT = 100;
+    public static int BATCH_COUNT = 1;
     /**
      * Temporary storage of data
      */

@@ -51,6 +51,17 @@ public class ExcelReaderSheetBuilder extends AbstractExcelReaderParameterBuilder
         return this;
     }
 
+    /**
+     * numRows
+     *
+     * @param numRows
+     * @return
+     */
+    public ExcelReaderSheetBuilder numRows(Integer numRows) {
+        readSheet.setNumRows(numRows);
+        return this;
+    }
+
     public ReadSheet build() {
         return readSheet;
     }

@@ -118,6 +118,7 @@ public class DefaultAnalysisEventProcessor implements AnalysisEventProcessor {
                 throw new ExcelAnalysisStopException();
             }
         }
+
     }
 
     private void buildHead(AnalysisContext analysisContext, Map<Integer, ReadCellData<?>> cellDataMap) {

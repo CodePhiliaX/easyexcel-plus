@@ -6,6 +6,9 @@ import cn.idev.excel.event.Listener;
 import cn.idev.excel.context.AnalysisContext;
 import cn.idev.excel.metadata.CellExtra;
 import cn.idev.excel.metadata.data.ReadCellData;
+import cn.idev.excel.read.metadata.holder.ReadRowHolder;
+import cn.idev.excel.read.metadata.holder.ReadSheetHolder;
+import cn.idev.excel.read.metadata.holder.ReadWorkbookHolder;
 
 /**
  * Interface to listen for read results
@@ -31,7 +34,8 @@ public interface ReadListener<T> extends Listener {
      * @param headMap
      * @param context
      */
-    default void invokeHead(Map<Integer, ReadCellData<?>> headMap, AnalysisContext context) {}
+    default void invokeHead(Map<Integer, ReadCellData<?>> headMap, AnalysisContext context) {
+    }
 
     /**
      * When analysis one row trigger invoke function.
@@ -47,7 +51,8 @@ public interface ReadListener<T> extends Listener {
      * @param extra   extra information
      * @param context analysis context
      */
-    default void extra(CellExtra extra, AnalysisContext context) {}
+    default void extra(CellExtra extra, AnalysisContext context) {
+    }
 
     /**
      * if have something to do after all analysis
@@ -63,6 +68,24 @@ public interface ReadListener<T> extends Listener {
      * @return
      */
     default boolean hasNext(AnalysisContext context) {
+        if (context == null
+                || context.readRowHolder() == null
+                || context.readSheetHolder() == null
+                || context.readSheetHolder().getReadSheet() == null
+                || context.readWorkbookHolder().getReadWorkbook() == null
+        ) {
+            return true;
+        }
+        ReadRowHolder readRowHolder = context.readRowHolder();
+        int index = readRowHolder.getRowIndex();
+
+        Integer limit = context.readSheetHolder().getReadSheet().getNumRows();
+        if (limit == null) {
+            limit = context.readWorkbookHolder().getReadWorkbook().getNumRows();
+        }
+        if (limit != null && index >= limit) {
+            return false;
+        }
         return true;
     }
 }

@@ -53,7 +53,7 @@ public class ReadTest {
             for (DemoData demoData : dataList) {
                 log.info("读取到一条数据{}", JSON.toJSONString(demoData));
             }
-        })).sheet().doRead();
+        })).numRows(2).sheet().doRead();
 
         // 写法2：
         // 匿名内部类 不用额外写一个DemoDataListener
@@ -105,6 +105,7 @@ public class ReadTest {
         try (ExcelReader excelReader = EasyExcel.read(fileName, DemoData.class, new DemoDataListener()).build()) {
             // 构建一个sheet 这里可以指定名字或者no
             ReadSheet readSheet = EasyExcel.readSheet(0).build();
+            readSheet.setNumRows(2);
             // 读取一个sheet
             excelReader.read(readSheet);
         }
@@ -124,7 +125,7 @@ public class ReadTest {
     public void indexOrNameRead() {
         String fileName = TestFileUtil.getPath() + "demo" + File.separator + "demo.xlsx";
         // 这里默认读取第一个sheet
-        EasyExcel.read(fileName, IndexOrNameData.class, new IndexOrNameDataListener()).sheet().doRead();
+        EasyExcel.read(fileName, IndexOrNameData.class, new IndexOrNameDataListener()).numRows(1).sheet().doRead();
     }
 
     /**

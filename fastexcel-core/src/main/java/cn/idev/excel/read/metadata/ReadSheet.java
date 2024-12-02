@@ -15,6 +15,11 @@ public class ReadSheet extends ReadBasicParameter {
      */
     private String sheetName;
 
+    /**
+     * The number of rows to read, the default is all, start with 0.
+     */
+    public Integer numRows;
+
     public ReadSheet() {}
 
     public ReadSheet(Integer sheetNo) {
@@ -24,6 +29,12 @@ public class ReadSheet extends ReadBasicParameter {
     public ReadSheet(Integer sheetNo, String sheetName) {
         this.sheetNo = sheetNo;
         this.sheetName = sheetName;
+    }
+
+    public ReadSheet(Integer sheetNo, String sheetName,Integer numRows) {
+        this.sheetNo = sheetNo;
+        this.sheetName = sheetName;
+        this.numRows = numRows;
     }
 
     public Integer getSheetNo() {
@@ -42,6 +53,15 @@ public class ReadSheet extends ReadBasicParameter {
         this.sheetName = sheetName;
     }
 
+
+    public Integer getNumRows() {
+        return numRows;
+    }
+
+    public void setNumRows(Integer numRows) {
+        this.numRows = numRows;
+    }
+
     public void copyBasicParameter(ReadSheet other) {
         if (other == null) {
             return;
@@ -53,6 +73,7 @@ public class ReadSheet extends ReadBasicParameter {
         this.setCustomConverterList(other.getCustomConverterList());
         this.setAutoTrim(other.getAutoTrim());
         this.setUse1904windowing(other.getUse1904windowing());
+        this.setNumRows(other.getNumRows());
     }
 
     @Override

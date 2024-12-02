@@ -353,4 +353,25 @@ public class FastExcelFactory {
         }
         return excelReaderSheetBuilder;
     }
+
+    /**
+     * Build excel the 'readSheet'
+     * @param sheetNo Index of sheet,0 base.
+     * @param sheetName The name of sheet.
+     * @param numRows The number of rows to read, the default is all, start with 0.
+     * @return
+     */
+    public static ExcelReaderSheetBuilder readSheet(Integer sheetNo, String sheetName,Integer numRows) {
+        ExcelReaderSheetBuilder excelReaderSheetBuilder = new ExcelReaderSheetBuilder();
+        if (sheetNo != null) {
+            excelReaderSheetBuilder.sheetNo(sheetNo);
+        }
+        if (sheetName != null) {
+            excelReaderSheetBuilder.sheetName(sheetName);
+        }
+        if (numRows !=null) {
+            excelReaderSheetBuilder.numRows(numRows);
+        }
+        return excelReaderSheetBuilder;
+    }
 }
