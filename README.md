@@ -159,3 +159,5 @@ public static void main(String[] args) {
 
 ## 关注作者
 关注作者“程序员小懒“的公众号加入技术交流群，获取更多技术干货和最新动态。
+<a><img src="[https://github.com/chat2db/Chat2DB/assets/22975773/81d13eff-c615-49f5-aee3-4107089593e0](contact_wechat](https://github.com/user-attachments/assets/5496034f-865a-4bef-9882-9b9579561322)" width="30%"/></a>
+
