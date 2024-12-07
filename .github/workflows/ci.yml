@@ -47,6 +47,9 @@ jobs:
         run:  chmod +x mvnw
       - name: Build fastexcel-support
         run: ./mvnw -pl fastexcel-support install -B -V
+      - name: List JAR Contents
+        run: |
+          jar -tf fastexcel-support/target/fastexcel-support-*.jar
       - name: Check Directories in JAR
         run: |
           jar -xf fastexcel-support/target/fastexcel-support-*.jar
