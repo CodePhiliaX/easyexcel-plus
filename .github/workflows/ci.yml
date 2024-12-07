@@ -45,12 +45,24 @@ jobs:
             ${{ runner.os }}-m2
       - name: Chmod
         run:  chmod +x mvnw
+      - name: Build fastexcel-support
+        run: ./mvnw -pl fastexcel-support install -B -V
+      - name: Check CGLIB in JAR
+        run: |
+          jar -xf fastexcel-support/target/fastexcel-support-*.jar
+          if [ -d "cn/idev/excel/support/cglib" ]; then
+            echo "CGLIB directory exists in the JAR."
+          else
+            echo "CGLIB directory does not exist in the JAR."
+            exit 1
+          fi
       - name: Test with Maven
         if: ${{ matrix.java == '8' }}
         run: ./mvnw test -B -Dmaven.test.skip=false
       - name: Test with Maven
         if: ${{ matrix.java != '8' }}
         run: ./mvnw test -B -Dmaven.test.skip=false -DargLine="--add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/sun.reflect.annotation=ALL-UNNAMED"
+      
       - name: Maven Build
         run: ./mvnw install -B -V
       - name: Java Doc
