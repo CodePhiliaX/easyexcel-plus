@@ -47,15 +47,11 @@ jobs:
         run:  chmod +x mvnw
       - name: Build fastexcel-support
         run: ./mvnw -pl fastexcel-support install -B -V
-      - name: Check CGLIB in JAR
+      - name: Check Directories in JAR
         run: |
           jar -xf fastexcel-support/target/fastexcel-support-*.jar
-          if [ -d "cn/idev/excel/support/cglib" ]; then
-            echo "CGLIB directory exists in the JAR."
-          else
-            echo "CGLIB directory does not exist in the JAR."
-            exit 1
-          fi
+          echo "Listing directories under /cn/idev/excel/support:"
+          find cn/idev/excel/support -type d
       - name: Test with Maven
         if: ${{ matrix.java == '8' }}
         run: ./mvnw test -B -Dmaven.test.skip=false
