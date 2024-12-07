@@ -74,7 +74,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <includes>
-                        <include>/ai/chat2db/easyexcel/test/core/**/*.java</include>
+                        <include>/cn/idev/excel/test/core/**/*.java</include>
                     </includes>
                     <testFailureIgnore>false</testFailureIgnore>
                 </configuration>
