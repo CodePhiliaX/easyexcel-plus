@@ -23,17 +23,17 @@ public class FileConverterContext {
 
     private File inputFile;
     private File outputFile;
-    private String fountPath;
+    private String fontPath;
     private Workbook workbook;
     private Document document;
     private int[] sheets;
     private ExcelTypeEnum excelTypeEnum;
 
-    public FileConverterContext(File inputFile, File outputFile, String fountPath, int[] sheets) {
+    public FileConverterContext(File inputFile, File outputFile, String fontPath, int[] sheets) {
         try {
             this.inputFile = inputFile;
             this.outputFile = outputFile;
-            this.fountPath = fountPath;
+            this.fontPath = fontPath;
             ReadWorkbook readWorkbook = new ReadWorkbook();
             readWorkbook.setFile(inputFile);
             excelTypeEnum = ExcelTypeEnum.valueOf(readWorkbook);
