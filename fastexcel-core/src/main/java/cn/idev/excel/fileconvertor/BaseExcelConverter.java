@@ -36,7 +36,7 @@ public abstract class BaseExcelConverter implements ExcelConverter {
         float[] columnWidths = getColumnWidths(sheet);
         Table table = new Table(columnWidths);
 
-        addRowsToTable(table, sheet, columnWidths, context.getFountPath());
+        addRowsToTable(table, sheet, columnWidths, context.getFontPath());
 //        addPicsToTable(table, sheet);
 
         context.getDocument().add(table);
