@@ -6,22 +6,22 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import cn.idev.excel.enums.BooleanEnum;
 
+import cn.idev.excel.annotation.enums.BooleanEnum;
 import org.apache.poi.common.usermodel.fonts.FontCharset;
 import org.apache.poi.hssf.usermodel.HSSFPalette;
 import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.IndexedColors;
 
 /**
- * Custom content styles.
+ * Custom header styles.
  *
  * @author Jiaju Zhuang
  */
 @Target({ElementType.FIELD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
-public @interface ContentFontStyle {
+public @interface HeadFontStyle {
 
     /**
      * The name for the font (i.e. Arial)

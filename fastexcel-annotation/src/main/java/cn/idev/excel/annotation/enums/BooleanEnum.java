@@ -1,4 +1,4 @@
-package cn.idev.excel.enums;
+package cn.idev.excel.annotation.enums;
 
 import lombok.Getter;
 

@@ -26,7 +26,6 @@
         <dependency>
             <groupId>cn.idev.excel</groupId>
             <artifactId>fastexcel-core</artifactId>
-            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba.fastjson2</groupId>

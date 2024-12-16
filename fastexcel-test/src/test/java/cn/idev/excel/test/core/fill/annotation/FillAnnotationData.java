@@ -34,6 +34,6 @@ public class FillAnnotationData {
     private String string1;
     @ExcelProperty("字符串2")
     private String string2;
-    @ExcelProperty(value = "图片", converter = StringImageConverter.class)
+    @ExcelProperty(value = "图片", converter = "cn.idev.excel.converters.string.StringImageConverter")
     private String image;
 }
