@@ -80,7 +80,7 @@ public class ClassUtils {
      * The cache configuration information for each of the class
      */
     private static final ThreadLocal<Map<Class<?>, Map<String, ExcelContentProperty>>> CLASS_CONTENT_THREAD_LOCAL
-        = new ThreadLocal<>();
+            = new ThreadLocal<>();
 
     /**
      * The cache configuration information for each of the class
@@ -237,14 +237,21 @@ public class ClassUtils {
 
             ExcelProperty excelProperty = field.getAnnotation(ExcelProperty.class);
             if (excelProperty != null) {
-                Class<? extends Converter<?>> convertClazz = excelProperty.converter();
-                if (convertClazz != AutoConverter.class) {
+                String convertered = excelProperty.converter();
+                if (StringUtils.isNotBlank(convertered)) {
                     try {
-                        Converter<?> converter = convertClazz.getDeclaredConstructor().newInstance();
-                        excelContentProperty.setConverter(converter);
+                        Class<?> converteredClass = Class.forName(convertered);
+                        if (Converter.class.isAssignableFrom(converteredClass)) {
+                            if (converteredClass != AutoConverter.class) {
+                                Converter<?> converter = (Converter<?>) converteredClass.getDeclaredConstructor().newInstance();
+                                excelContentProperty.setConverter(converter);
+                            }
+                        } else {
+                            throw new ExcelCommonException();
+                        }
                     } catch (Exception e) {
                         throw new ExcelCommonException(
-                            "Can not instance custom converter:" + convertClazz.getName());
+                            "Can not instance custom converter:" + convertered);
                     }
                 }
             }
@@ -428,7 +435,7 @@ public class ClassUtils {
     }
 
     private static Map<Integer, FieldWrapper> buildSortedAllFieldMap(Map<Integer, List<FieldWrapper>> orderFieldMap,
-        Map<Integer, FieldWrapper> indexFieldMap) {
+                                                                     Map<Integer, FieldWrapper> indexFieldMap) {
 
         Map<Integer, FieldWrapper> sortedAllFieldMap = new HashMap<>(
             (orderFieldMap.size() + indexFieldMap.size()) * 4 / 3 + 1);

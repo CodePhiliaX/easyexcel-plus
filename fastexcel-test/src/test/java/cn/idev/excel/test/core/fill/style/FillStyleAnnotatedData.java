@@ -2,8 +2,8 @@ package cn.idev.excel.test.core.fill.style;
 
 import java.util.Date;
 
-import cn.idev.excel.enums.BooleanEnum;
-import cn.idev.excel.enums.poi.FillPatternTypeEnum;
+import cn.idev.excel.annotation.enums.BooleanEnum;
+import cn.idev.excel.annotation.enums.poi.FillPatternTypeEnum;
 import cn.idev.excel.annotation.write.style.ContentFontStyle;
 import cn.idev.excel.annotation.write.style.ContentStyle;
 

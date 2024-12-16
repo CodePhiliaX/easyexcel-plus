@@ -23,7 +23,7 @@ import lombok.Setter;
 public class ImageData {
     private File file;
     private InputStream inputStream;
-    @ExcelProperty(converter = StringImageConverter.class)
+    @ExcelProperty(converter = "cn.idev.excel.converters.string")
     private String string;
     private byte[] byteArray;
 }

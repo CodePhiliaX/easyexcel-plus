@@ -6,26 +6,26 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import cn.idev.excel.enums.BooleanEnum;
-import cn.idev.excel.enums.poi.BorderStyleEnum;
-import cn.idev.excel.enums.poi.FillPatternTypeEnum;
-import cn.idev.excel.enums.poi.HorizontalAlignmentEnum;
-import cn.idev.excel.enums.poi.VerticalAlignmentEnum;
+import cn.idev.excel.annotation.enums.BooleanEnum;
 
+import cn.idev.excel.annotation.enums.poi.BorderStyleEnum;
+import cn.idev.excel.annotation.enums.poi.FillPatternTypeEnum;
+import cn.idev.excel.annotation.enums.poi.HorizontalAlignmentEnum;
+import cn.idev.excel.annotation.enums.poi.VerticalAlignmentEnum;
 import org.apache.poi.ss.usermodel.BuiltinFormats;
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IgnoredErrorType;
 import org.apache.poi.ss.usermodel.IndexedColors;
 
 /**
- * Custom content styles
+ * Custom header styles
  *
  * @author Jiaju Zhuang
  */
 @Target({ElementType.FIELD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
-public @interface ContentStyle {
+public @interface HeadStyle {
     /**
      * Set the data format (must be a valid format). Built in formats are defined at {@link BuiltinFormats}.
      */
@@ -56,7 +56,6 @@ public @interface ContentStyle {
     /**
      * Set whether the text should be wrapped. Setting this flag to <code>true</code> make all content visible within a
      * cell by displaying it on multiple lines
-     *
      */
     BooleanEnum wrapped() default BooleanEnum.DEFAULT;
 
@@ -67,7 +66,7 @@ public @interface ContentStyle {
 
     /**
      * Set the degree of rotation for the text in the cell.
-     *
+     * <p>
      * Note: HSSF uses values from -90 to 90 degrees, whereas XSSF uses values from 0 to 180 degrees. The
      * implementations of this method will map between these two value-ranges accordingly, however the corresponding
      * getter is returning values in the range mandated by the current type of Excel file-format that this CellStyle is
@@ -111,7 +110,6 @@ public @interface ContentStyle {
      * Set the color to use for the right border
      *
      * @see IndexedColors
-     *
      */
     short rightBorderColor() default -1;
 
@@ -119,7 +117,6 @@ public @interface ContentStyle {
      * Set the color to use for the top border
      *
      * @see IndexedColors
-     *
      */
     short topBorderColor() default -1;
 
@@ -127,7 +124,6 @@ public @interface ContentStyle {
      * Set the color to use for the bottom border
      *
      * @see IndexedColors
-     *
      */
     short bottomBorderColor() default -1;
 
@@ -142,7 +138,6 @@ public @interface ContentStyle {
      * Set the background fill color.
      *
      * @see IndexedColors
-     *
      */
     short fillBackgroundColor() default -1;
 
@@ -150,7 +145,6 @@ public @interface ContentStyle {
      * Set the foreground fill color <i>Note: Ensure Foreground color is set prior to background color.</i>
      *
      * @see IndexedColors
-     *
      */
     short fillForegroundColor() default -1;
 

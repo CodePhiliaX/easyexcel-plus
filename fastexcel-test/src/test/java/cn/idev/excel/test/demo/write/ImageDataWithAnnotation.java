@@ -27,7 +27,7 @@ public class ImageDataWithAnnotation {
     /**
      * 如果string类型 必须指定转换器，string默认转换成string
      */
-    @ExcelProperty(converter = StringImageConverter.class)
+    @ExcelProperty(converter = "cn.idev.excel.converters.string.StringImageConverter")
     private String string;
     private byte[] byteArray;
     /**

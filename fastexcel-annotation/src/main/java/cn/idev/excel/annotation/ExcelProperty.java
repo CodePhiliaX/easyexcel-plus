@@ -6,8 +6,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import cn.idev.excel.converters.AutoConverter;
-import cn.idev.excel.converters.Converter;
 import cn.idev.excel.annotation.format.DateTimeFormat;
 
 /**
@@ -54,8 +52,9 @@ public @interface ExcelProperty {
      * Force the current field to use this converter.
      *
      * @return Converter
+     * @see cn.idev.excel.converters.Converter
      */
-    Class<? extends Converter<?>> converter() default AutoConverter.class;
+    String converter() default "cn.idev.excel.converters.AutoConverter";
 
     /**
      *

@@ -3,7 +3,7 @@ package cn.idev.excel.test.temp.write;
 import cn.idev.excel.annotation.ExcelProperty;
 import cn.idev.excel.annotation.write.style.ContentStyle;
 import cn.idev.excel.annotation.write.style.HeadStyle;
-import cn.idev.excel.enums.BooleanEnum;
+import cn.idev.excel.annotation.enums.BooleanEnum;
 
 import lombok.Data;
 

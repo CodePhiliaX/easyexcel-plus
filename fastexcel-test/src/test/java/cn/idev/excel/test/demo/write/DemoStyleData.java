@@ -2,7 +2,7 @@ package cn.idev.excel.test.demo.write;
 
 import java.util.Date;
 
-import cn.idev.excel.enums.poi.FillPatternTypeEnum;
+import cn.idev.excel.annotation.enums.poi.FillPatternTypeEnum;
 import cn.idev.excel.annotation.ExcelProperty;
 import cn.idev.excel.annotation.write.style.ContentFontStyle;
 import cn.idev.excel.annotation.write.style.ContentStyle;

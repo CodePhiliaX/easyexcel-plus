@@ -17,7 +17,7 @@ import lombok.Setter;
 public class FillData {
     private String name;
     @NumberFormat("#")
-    @ExcelProperty(converter = DoubleStringConverter.class)
+    @ExcelProperty(converter = "cn.idev.excel.converters.doubleconverter.DoubleStringConverter")
     private Double number;
     private String empty;
 }

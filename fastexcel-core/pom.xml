@@ -30,12 +30,10 @@
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>5.2.5</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>5.2.5</version>
         </dependency>
 
         <dependency>
@@ -58,13 +56,17 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.32</version>
         </dependency>
         <dependency>
             <groupId>cn.idev.excel</groupId>
             <artifactId>fastexcel-support</artifactId>
             <version>0.0.1</version>
         </dependency>
+        <dependency>
+            <groupId>cn.idev.excel</groupId>
+            <artifactId>fastexcel-annotation</artifactId>
+        </dependency>
+
         <!-- itext7 -->
         <dependency>
             <groupId>com.itextpdf</groupId>
