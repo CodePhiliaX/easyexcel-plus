@@ -174,14 +174,14 @@ public class ConverterUtils {
         }
         if (converter == null) {
             throw new ExcelDataConvertException(rowIndex, columnIndex, cellData, contentProperty,
-                "Converter not found, convert " + cellData.getType() + " to " + clazz.getName());
+                "Error at row " + rowIndex + ", column " + columnIndex + ": Converter not found, convert " + cellData.getType() + " to " + clazz.getName());
         }
 
         try {
             return converter.convertToJavaData(new ReadConverterContext<>(cellData, contentProperty, context));
         } catch (Exception e) {
             throw new ExcelDataConvertException(rowIndex, columnIndex, cellData, contentProperty,
-                "Convert data " + cellData + " to " + clazz + " error ", e);
+                "Error at row " + rowIndex + ", column " + columnIndex + ": Convert data " + cellData + " to " + clazz + " error ", e);
         }
     }
 }
