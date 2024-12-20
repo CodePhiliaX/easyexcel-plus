@@ -23,6 +23,7 @@ import cn.idev.excel.util.ClassUtils;
 import cn.idev.excel.util.FieldUtils;
 import cn.idev.excel.util.ListUtils;
 import cn.idev.excel.util.MapUtils;
+import cn.idev.excel.util.PoiUtils;
 import cn.idev.excel.util.StringUtils;
 import cn.idev.excel.util.WriteHandlerUtils;
 import cn.idev.excel.write.handler.context.CellWriteHandlerContext;
@@ -31,15 +32,11 @@ import cn.idev.excel.write.metadata.fill.AnalysisCell;
 import cn.idev.excel.write.metadata.fill.FillConfig;
 import cn.idev.excel.write.metadata.fill.FillWrapper;
 import cn.idev.excel.write.metadata.holder.WriteSheetHolder;
-
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.collections4.CollectionUtils;
-
-import cn.idev.excel.util.PoiUtils;
-
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.CellType;
@@ -212,10 +209,10 @@ public class ExcelWriteFillExecutor extends AbstractExcelWriteExecutor {
 
             if (analysisCell.getOnlyOneVariable()) {
                 String variable = analysisCell.getVariableList().get(0);
-                if (!dataKeySet.contains(variable)) {
-                    continue;
+                Object value = null;
+                if (dataKeySet.contains(variable)) {
+                    value = dataMap.get(variable);
                 }
-                Object value = dataMap.get(variable);
                 ExcelContentProperty excelContentProperty = ClassUtils.declaredExcelContentProperty(dataMap,
                     writeContext.currentWriteHolder().excelWriteHeadProperty().getHeadClazz(), variable,
                     writeContext.currentWriteHolder());
