@@ -1,7 +1,7 @@
 package cn.idev.excel.enums;
 
 /**
- * cache locaciton
+ * cache location
  *
  * @author Jiaju Zhuang
  **/
@@ -19,5 +19,5 @@ public enum CacheLocationEnum {
     /**
      * No caching.It may lose some of performance.
      */
-    NONE;
+    NONE
 }
